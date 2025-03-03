@@ -1,0 +1,17 @@
+{
+  "main": "index.html",
+  "preload": "preload/services.js",
+  "logo": "logo.png",
+  "development": {
+    "main": "http://localhost:5173"
+  },
+  "features": [
+    {
+      "code": "Dinosaur",
+      "explain": "Dinosaur Game is a mini game that you can play with your friends.",
+      "cmds": ["恐龙", "摸鱼", "google", "小游戏", "Dinosaur"],
+      "platform": ["win32", "darwin", "linux"],
+      "mainPush": true
+    }
+  ]
+}
