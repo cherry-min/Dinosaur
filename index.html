@@ -3119,23 +3119,26 @@
        * Toggle speed setting if toggle is shown.
        */
       toggleSpeed() {
-        if (Runner.audioCues) {
-          const speedChange =
-            Runner.slowDown != this.slowSpeedCheckbox.checked;
+        debugger
+        // if (Runner.audioCues) {]
+        //false != false
+        const speedChange =
+          Runner.slowDown != this.slowSpeedCheckbox.checked;
+        console.log(this.slowSpeedCheckbox.checked);
 
-          if (speedChange) {
-            Runner.slowDown = this.slowSpeedCheckbox.checked;
-            const updatedConfig = Runner.slowDown
-              ? Runner.slowConfig
-              : Runner.normalConfig;
+        // if (speedChange) {
+        Runner.slowDown = this.slowSpeedCheckbox.checked;
+        const updatedConfig = Runner.slowDown
+          ? Runner.slowConfig
+          : Runner.normalConfig;
 
-            Runner.config = Object.assign(Runner.config, updatedConfig);
-            this.currentSpeed = updatedConfig.SPEED;
-            this.tRex.enableSlowConfig();
-            this.horizon.adjustObstacleSpeed();
-          }
-          this.disableSpeedToggle(true);
-        }
+        Runner.config = Object.assign(Runner.config, updatedConfig);
+        this.currentSpeed = updatedConfig.SPEED;
+        this.tRex.enableSlowConfig();
+        this.horizon.adjustObstacleSpeed();
+        // }
+        // this.disableSpeedToggle(true);
+        // }
       },
 
       /**
